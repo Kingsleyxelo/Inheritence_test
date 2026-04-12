@@ -8,14 +8,15 @@ class mutton extends meat {
         System.out.println("This is red meat");
     }
 }
-class chicken extends mutton {
+class chicken extends meat {
     chicken(){
         System.out.println("This is chicken meat");
     }
 }
 
 public class Food {
-    public static void main(String[] args){
-        chicken obj2 = new chicken();
+     static void main(String[] args){
+         new mutton();
+         new chicken();
     }
 }

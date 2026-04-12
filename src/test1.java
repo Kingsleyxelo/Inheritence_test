@@ -1,22 +1,24 @@
 static class test1 {
-    void marks(){
+    void mark(){
         System.out.println("What is your mark?");
+    }
+    void dp(){
+        System.out.println("What is your Dp?");
     }
 }
 
-static class mark extends test1 {
-    void marks(){
-        System.out.println("80%");
+class Overallmark extends test1{
+    @Override void mark(){
+        System.out.println("My mark is 80%");
+    }
+    void assignment(){
+        System.out.println("My mark is 73");
     }
 }
 
 void main() {
-    test1 x;
-    test1 y;
-
-    y = new test1();
-    y.marks();
-
-    x = new mark();
-    x.marks();
+    Overallmark obj = new Overallmark();
+    obj.mark();
+    obj.assignment();
+    obj.dp();
 }
